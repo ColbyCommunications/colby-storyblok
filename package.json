@@ -1,0 +1,20 @@
+{
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "dev-ssl": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "stackblitz": "npm run dev"
+    },
+    "stackblitz": {
+        "startCommand": "npm run stackblitz"
+    },
+    "devDependencies": {
+        "@nuxtjs/tailwindcss": "^6.11.4",
+        "@storyblok/nuxt": "^6.0.4",
+        "dotenv": "^16.4.5",
+        "nuxt": "^3.10.2"
+    }
+}
