@@ -13,10 +13,22 @@ export default defineNuxtConfig({
                 apiOptions: {
                     region: 'us',
                 },
+                componentsDir: '~/components/storyblok',
             },
         ],
         '@nuxtjs/tailwindcss',
+        '@pinia/nuxt',
     ],
 
     compatibilityDate: '2024-10-25',
+
+    runtimeConfig: {
+        public: {
+            siteName: process.env.SITE_NAME,
+        },
+    },
+
+    pinia: {
+        storesDirs: ['./stores/**'],
+    },
 });

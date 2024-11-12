@@ -7,12 +7,30 @@
     const story = useState();
     const storyblokApi = useStoryblokApi();
 
-    console.log('TEST');
+    const config = useRuntimeConfig();
 
     const slug = route.params.slug;
 
-    const { data } = await storyblokApi.get(`cdn/stories/${process.env.SITE_NAME}/${slug}`, {
+    const { data } = await storyblokApi.get(`cdn/stories/${config.public.siteName}/${slug}`, {
         version: 'draft',
     });
     story.value = data.story;
+
+    switch (process.env.SITE_NAME) {
+        case 'colby-news':
+            definePageMeta({
+                layout: 'news',
+            });
+            break;
+        case 'colby-afa':
+            definePageMeta({
+                layout: 'afa',
+            });
+            break;
+        default:
+            definePageMeta({
+                layout: 'colby',
+            });
+            break;
+    }
 </script>

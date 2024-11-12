@@ -1,15 +1,37 @@
 <template>
-    <StoryblokComponent v-if="story" :blok="story.content" />
+    <NuxtLayout :name="layout" :config="siteConfig">
+        <StoryblokComponent v-if="story" :blok="story.content" />
+    </NuxtLayout>
 </template>
 
 <script setup>
     const story = useState();
     const storyblokApi = useStoryblokApi();
-
-    const { data } = await storyblokApi.get(`cdn/stories/${process.env.SITE_NAME}/home`, {
+    const config = useRuntimeConfig();
+    const { data } = await storyblokApi.get(`cdn/stories/${config.public.siteName}/home`, {
         version: 'draft',
     });
     story.value = data.story;
 
-    console.log('INDEX');
+    const {
+        data: { story: siteConfig },
+    } = await storyblokApi.get(`cdn/stories/${config.public.siteName}/config`);
+    console.log(siteConfig);
+
+    definePageMeta({
+        layout: 'false',
+    });
+
+    let layout = '';
+    switch (config.public.siteName) {
+        case 'colby-news':
+            layout = 'news';
+            break;
+        case 'colby-afa':
+            layout = 'afa';
+            break;
+        default:
+            layout = 'colby';
+            break;
+    }
 </script>
