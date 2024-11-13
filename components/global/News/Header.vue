@@ -43,7 +43,6 @@
 
 <script setup>
     import MenuButtons from './MenuButtons.vue';
-    import { useNewsStore } from '@/stores/news';
-    const store = useNewsStore();
-    console.log(store);
+    // import { useNewsStore } from '@/stores/news';
+    // const store = useNewsStore();
 </script>

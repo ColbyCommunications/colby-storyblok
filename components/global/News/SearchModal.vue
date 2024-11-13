@@ -65,7 +65,7 @@
                                 <button
                                     class="open-menu bg-white p-2 rounded-lg group transition-colors selected:bg-black selected:bg-opacity-[7%] disabled:pointer-events-none"
                                     aria-label="Open menu (modal)"
-                                    @click="openMenu"
+                                    @click="store.openMenu"
                                 >
                                     <svg
                                         class="w-6 h-6 group-hover:scale-125 transform transition-transform"
@@ -83,7 +83,7 @@
                                 <button
                                     class="open-search bg-white p-2 rounded-lg group transition-colors selected:bg-black selected:bg-opacity-[7%] disabled:pointer-events-none selected"
                                     aria-label="Open search (modal)"
-                                    @click="closeSearch"
+                                    @click="store.closeSearch"
                                 >
                                     <svg
                                         class="w-6 h-6 group-hover:scale-125 transform transition-transform"
@@ -111,7 +111,7 @@
                             id="close-search"
                             class="p-2 transition-colors bg-white rounded-lg pointer-events-auto close-modal bg-opacity-90 hover:bg-opacity-100 group"
                             aria-label="Close modal"
-                            @click="closeSearch"
+                            @click="store.closeSearch"
                         >
                             <svg
                                 class="w-6 h-6 transition-transform transform group-hover:scale-125"
@@ -288,29 +288,6 @@
         </div>
     </div>
 </template>
-<script>
-    import { useNewsStore } from '@/stores/news';
-    import Algolia from './Algolia.vue';
-
-    export default {
-        components: {
-            Algolia,
-        },
-        setup() {
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            const store = useNewsStore();
-            return {
-                store,
-            };
-        },
-        methods: {
-            closeSearch() {
-                this.store.closeSearch();
-            },
-            openMenu() {
-                this.store.closeSearch();
-                this.store.openMenu();
-            },
-        },
-    };
+<script setup>
+    import { store } from '../stores/news.js';
 </script>

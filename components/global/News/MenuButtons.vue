@@ -4,7 +4,7 @@
             <button
                 class="open-menu bg-white p-2 rounded-lg group transition-colors selected:bg-black selected:bg-opacity-[7%]"
                 aria-label="Open menu (modal)"
-                @click="openMenu"
+                @click="store.openMenu"
             >
                 <svg
                     class="w-6 h-6 group-hover:scale-125 transform transition-transform"
@@ -22,7 +22,7 @@
             <button
                 class="open-search bg-white p-2 rounded-lg group transition-colors selected:bg-black selected:bg-opacity-[7%]"
                 aria-label="Open search (modal)"
-                @click="openSearch"
+                @click="store.openSearch"
             >
                 <svg
                     class="w-6 h-6 group-hover:scale-125 transform transition-transform"
@@ -38,24 +38,6 @@
         </div>
     </div>
 </template>
-<script>
-    import { useNewsStore } from '@/stores/news';
-
-    export default {
-        setup() {
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            const store = useNewsStore();
-            return {
-                store,
-            };
-        },
-        methods: {
-            openSearch() {
-                this.store.openSearch();
-            },
-            openMenu() {
-                this.store.openMenu();
-            },
-        },
-    };
+<script setup>
+    import { store } from '../stores/news';
 </script>

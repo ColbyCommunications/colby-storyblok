@@ -1,33 +1,36 @@
-import { defineStore } from 'pinia';
+import { reactive } from 'vue';
 
-export const useNewsStore = defineStore('news', {
-  state: () => {
-    return {
-      searchOpen: false,
-      menuOpen: false,
-    };
-  },
-  actions: {
+export const store = reactive({
+    menuOpen: false,
+    searchOpen: false,
     openSearch() {
-      const el = document.body;
-      el.classList.add('no-scroll');
-      this.searchOpen = true;
+        this.menuOpen = false;
+
+        useHead({
+            bodyAttrs: {
+                class: 'no-scroll',
+            },
+        });
+
+        this.searchOpen = true;
     },
     closeSearch() {
-      const el = document.body;
-      el.classList.remove('no-scroll');
-      this.searchOpen = false;
+        const el = document.body;
+        el.classList.remove('no-scroll');
+        this.searchOpen = false;
     },
     openMenu() {
-      const el = document.body;
-      el.classList.add('no-scroll');
-      this.menuOpen = true;
+        this.searchOpen = false;
+        useHead({
+            bodyAttrs: {
+                class: 'no-scroll',
+            },
+        });
+        this.menuOpen = true;
     },
     closeMenu() {
-      const el = document.body;
-      el.classList.remove('no-scroll');
-      this.menuOpen = false;
+        const el = document.body;
+        el.classList.remove('no-scroll');
+        this.menuOpen = false;
     },
-  },
 });
-

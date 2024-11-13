@@ -13,12 +13,12 @@
     },
     "devDependencies": {
         "@nuxtjs/tailwindcss": "^6.11.4",
-        "@pinia/nuxt": "0.6.1",
         "@storyblok/nuxt": "^6.0.4",
         "nuxt": "^3.10.2"
     },
     "dependencies": {
         "algoliasearch": "^5.13.0",
+        "lodash": "^4.17.21",
         "vue-instantsearch": "^4.19.10"
     }
 }

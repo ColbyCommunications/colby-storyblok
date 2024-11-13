@@ -17,7 +17,7 @@ export default defineNuxtConfig({
             },
         ],
         '@nuxtjs/tailwindcss',
-        '@pinia/nuxt',
+        // '@pinia/nuxt',
     ],
 
     compatibilityDate: '2024-10-25',
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
         },
     },
 
-    pinia: {
-        storesDirs: ['./stores/**'],
-    },
+    // pinia: {
+    //     storesDirs: ['./stores/**'],
+    // },
 });

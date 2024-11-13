@@ -56,7 +56,7 @@
                                 <button
                                     class="open-menu bg-white p-2 rounded-lg group transition-colors selected:bg-black selected:bg-opacity-[7%] disabled:pointer-events-none selected"
                                     aria-label="Open menu (modal)"
-                                    @click="closeMenu"
+                                    @click="store.closeMenu"
                                 >
                                     <svg
                                         class="w-6 h-6 group-hover:scale-125 transform transition-transform"
@@ -74,7 +74,7 @@
                                 <button
                                     class="open-search bg-white p-2 rounded-lg group transition-colors selected:bg-black selected:bg-opacity-[7%]"
                                     aria-label="Open search (modal)"
-                                    @click="openSearch"
+                                    @click="store.openSearch"
                                 >
                                     <svg
                                         class="w-6 h-6 group-hover:scale-125 transform transition-transform"
@@ -102,7 +102,7 @@
                             id="close-menu"
                             class="p-2 transition-colors bg-white rounded-lg pointer-events-auto close-modal bg-opacity-90 hover:bg-opacity-100 group disabled:pointer-events-none"
                             aria-label="Close modal"
-                            @click="closeMenu"
+                            @click="store.closeMenu"
                         >
                             <svg
                                 class="w-6 h-6 transition-transform transform group-hover:scale-125"
@@ -384,26 +384,6 @@
         </div>
     </div>
 </template>
-<script>
-    import { useNewsStore } from '@/stores/news';
-
-    export default {
-        setup() {
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            const store = useNewsStore();
-
-            return {
-                store,
-            };
-        },
-        methods: {
-            closeMenu() {
-                this.store.closeMenu();
-            },
-            openSearch() {
-                this.store.closeMenu();
-                this.store.openSearch();
-            },
-        },
-    };
+<script setup>
+    import { store } from '../stores/news.js';
 </script>
