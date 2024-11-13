@@ -8,5 +8,4 @@
 <script setup>
     import Header from '../components/global/Header.vue';
     const props = defineProps(['config']);
-    console.log(props.config);
 </script>

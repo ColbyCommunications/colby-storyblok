@@ -4,9 +4,7 @@
         class="sticky top-0 z-20 transition-colors bg-white site-header stuck:border-b stuck:border-black stuck:border-opacity-10 stuck:shadow"
     >
         <div class="container">
-            <div
-                class="flex justify-between items-center py-5 {# for JS reasons, keep the y-padding on this div (not the header) #}"
-            >
+            <div class="flex justify-between items-center py-5">
                 <a href="/" aria-label="Home">
                     <svg
                         class="h-[1.0625rem] sm:h-[1.625rem]"
@@ -37,12 +35,15 @@
                     </svg>
                 </a>
 
-                <div id="vue-menu-buttons"></div>
+                <MenuButtons />
             </div>
         </div>
     </header>
 </template>
 
 <script setup>
-    const store = useStore();
+    import MenuButtons from './MenuButtons.vue';
+    import { useNewsStore } from '@/stores/news';
+    const store = useNewsStore();
+    console.log(store);
 </script>

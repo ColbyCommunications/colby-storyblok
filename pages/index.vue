@@ -16,7 +16,6 @@
     const {
         data: { story: siteConfig },
     } = await storyblokApi.get(`cdn/stories/${config.public.siteName}/config`);
-    console.log(siteConfig);
 
     definePageMeta({
         layout: 'false',

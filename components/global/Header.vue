@@ -119,7 +119,6 @@
     }
 
     function checkUrl(title) {
-        console.log(route);
         const pathSegments = route.fullPath.split('/');
         if (pathSegments.length > 1) {
             // Get the first segment after the initial slash
