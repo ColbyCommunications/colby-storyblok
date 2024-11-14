@@ -10,6 +10,7 @@
     const config = useRuntimeConfig();
     const { data } = await storyblokApi.get(`cdn/stories/${config.public.siteName}/home`, {
         version: 'draft',
+        resolve_relations: 'featured-story.story',
     });
     story.value = data.story;
 
