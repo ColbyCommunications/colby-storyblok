@@ -14,11 +14,17 @@
     "devDependencies": {
         "@nuxtjs/tailwindcss": "^6.11.4",
         "@storyblok/nuxt": "^6.0.4",
-        "nuxt": "^3.10.2"
+        "nuxt": "^3.10.2",
+        "sass": "^1.80.7",
+        "tailwindcss-interaction-variants": "^5.0.0"
     },
     "dependencies": {
+        "@tailwindcss/aspect-ratio": "^0.2.0",
+        "@tailwindcss/forms": "^0.1.4",
         "algoliasearch": "^5.13.0",
         "lodash": "^4.17.21",
+        "postcss-selector-parser": "^7.0.0",
+        "tailwindcss-pseudo-elements": "^1.5.1",
         "vue-instantsearch": "^4.19.10"
     }
 }

@@ -9,3 +9,6 @@
     import Header from '../components/global/Header.vue';
     const props = defineProps(['config']);
 </script>
+<style lang="scss">
+    @use '~/assets/scss/colby/styles.scss';
+</style>

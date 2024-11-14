@@ -35,3 +35,6 @@
     //     ],
     // });
 </script>
+<style lang="scss">
+    @use '~/assets/scss/news/tailwind.scss';
+</style>

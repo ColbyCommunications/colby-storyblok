@@ -17,7 +17,6 @@ export default defineNuxtConfig({
             },
         ],
         '@nuxtjs/tailwindcss',
-        // '@pinia/nuxt',
     ],
 
     compatibilityDate: '2024-10-25',
@@ -28,7 +27,16 @@ export default defineNuxtConfig({
         },
     },
 
-    // pinia: {
-    //     storesDirs: ['./stores/**'],
-    // },
+    tailwindcss: {
+        configPath: process.env.TAILWIND_CONFIG,
+    },
+
+    components: {
+        dirs: [
+            {
+                path: '~/components/storyblok',
+                global: true,
+            },
+        ],
+    },
 });

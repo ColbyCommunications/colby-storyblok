@@ -20,7 +20,7 @@
     definePageMeta({
         layout: 'false',
     });
-
+    console.log(story);
     let layout = '';
     switch (config.public.siteName) {
         case 'colby-news':

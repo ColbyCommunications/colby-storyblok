@@ -1,0 +1,91 @@
+/**
+  * This CSS is specifically for the Accordion Blocks plugin
+  * https://wordpress.org/plugins/accordion-blocks/
+**/
+
+/* The accordion item container */
+.c-accordion__item {
+    // @apply bg-white;
+
+    .c-accordion__title {
+        margin-bottom: 0;
+    }
+
+    /* is-open is added to open accordion items */
+    &.is-open {
+        .c-accordion__title {
+            @apply bg-transparent;
+
+            &::before,
+            &::after {
+                @apply transition-transform;
+                transform: translateY(-50%) rotate(45deg);
+                transform-origin: center;
+            }
+        }
+    }
+
+    /* is-read is added to accordion items that have been opened at least once */
+    // &.is-read {}
+
+    & + & {
+        @apply mt-1;
+    }
+}
+
+/* An accordion item title */
+.c-accordion__title.c-accordion__title {
+    // @apply relative text-primary bg-white py-4 lg:py-4 px-9 text-lg;
+
+    /* To modify the style when hovering over an accordion item title
+       or when an accordion item title currently has broswer focus*/
+    &:hover,
+    &:focus {
+        @apply bg-transparent;
+    }
+
+    /* To modify the style when hovering over an accordion item title */
+    // &:hover {
+    // }
+
+    /* To modify the style when an accordion item
+	   title currently has broswer focus */
+    // &:focus {}
+
+    /* An accordion item title that is using a `<button>` tag */
+    // &--button {}
+
+    &::before,
+    &::after {
+        @apply absolute block bg-primary transition-transform;
+        content: '';
+        top: 50%;
+        right: auto;
+        transform: translateY(-50%);
+    }
+
+    &::before {
+        left: 1rem;
+        height: 0.14rem;
+        width: 0.8rem;
+    }
+
+    &::after {
+        left: 1.32rem;
+        height: 0.76rem;
+        width: 0.15rem;
+    }
+}
+
+/* An accordion item content container */
+.c-accordion__content {
+    // @apply px-5 pb-5 lg:px-9 lg:pb-9 bg-white;
+
+    > :first-child {
+        @apply mt-0;
+    }
+
+    > :last-child {
+        @apply mb-0;
+    }
+}
