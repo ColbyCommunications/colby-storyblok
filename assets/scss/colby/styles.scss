@@ -19,102 +19,102 @@
     h4,
     h5,
     h6 {
-        @apply font-extended;
-        @apply font-normal;
+        // // @apply font-extended;
+        // // @apply font-normal;
     }
 
     h2 {
-        @apply text-24;
-        @apply leading-110;
-        @apply -tracking-3;
+        // // @apply text-24;
+        // // @apply leading-110;
+        // // @apply -tracking-3;
     }
 
     h3 {
-        @apply text-20;
-        @apply leading-110;
-        @apply -tracking-3;
-        @apply text-indigo;
+        // // @apply text-20;
+        // // @apply leading-110;
+        // // @apply -tracking-3;
+        // // @apply text-indigo;
     }
 
     h4 {
-        @apply text-16;
-        @apply leading-110;
-        @apply -tracking-3;
-        @apply text-indigo;
+        // // @apply text-16;
+        // // @apply leading-110;
+        // // @apply -tracking-3;
+        // // @apply text-indigo;
     }
 
     h5 {
-        @apply text-14;
-        @apply font-bold;
-        @apply leading-130;
-        @apply -tracking-8;
-        @apply text-azure;
-        @apply uppercase;
+        // // @apply text-14;
+        // // @apply font-bold;
+        // // @apply leading-130;
+        // // @apply -tracking-8;
+        // // @apply text-azure;
+        // // @apply uppercase;
     }
 
     h6 {
-        @apply text-12;
-        @apply leading-110;
-        @apply -tracking-8;
-        @apply text-azure;
-        @apply uppercase;
+        // // @apply text-12;
+        // // // @apply leading-110;
+        // // @apply -tracking-8;
+        // // @apply text-azure;
+        // // @apply uppercase;
     }
 
     a {
-        @apply underline;
-        @apply hover:no-underline;
-        @apply hover:text-indigo;
+        // // @apply underline;
+        // // @apply hover:no-underline;
+        // // @apply hover:text-indigo;
     }
 
     // lists
     ul:not(.pagination__container):not(.directiory_information) {
-        @apply list-disc;
-        @apply pl-10;
-        @apply text-indigo;
-        @apply mb-4;
+        // @apply list-disc;
+        // @apply pl-10;
+        // @apply text-indigo;
+        // @apply mb-4;
 
         li {
-            @apply text-indigo-900;
-            @apply mt-2;
-            @apply font-body;
+            // @apply text-indigo-900;
+            // @apply mt-2;
+            // @apply font-body;
         }
     }
 
     ol {
-        @apply list-decimal;
-        @apply pl-10;
-        @apply text-indigo;
-        @apply mb-4;
+        // @apply list-decimal;
+        // @apply pl-10;
+        // @apply text-indigo;
+        // @apply mb-4;
 
         li {
-            @apply text-indigo-900;
-            @apply mt-2;
-            @apply font-body;
+            // @apply text-indigo-900;
+            // @apply mt-2;
+            // @apply font-body;
         }
     }
 
     ul:not(.pagination__container):not(.directiory_information),
     ol {
         ul {
-            @apply list-circle;
+            // @apply list-circle;
         }
 
         ul,
         ol {
             ul {
-                @apply list-square;
+                // @apply list-square;
             }
         }
     }
 
     // general divs for blocks, etc
     > div {
-        @apply clear-both;
-        @apply mb-20;
+        // @apply clear-both;
+        // @apply mb-20;
     }
 
     > div:last-child {
-        @apply mb-0;
+        // @apply mb-0;
     }
 
     .wp-block-heading {
@@ -122,11 +122,11 @@
     }
 
     .wp-block-paragraph {
-        @apply mb-0;
+        // @apply mb-0;
         > p {
-            @apply text-indigo-900;
-            @apply mb-4;
-            @apply font-body;
+            // @apply text-indigo-900;
+            // @apply mb-4;
+            // @apply font-body;
         }
     }
 
@@ -134,36 +134,36 @@
     .colby-table-block {
         td {
             a {
-                @apply no-underline;
+                // @apply no-underline;
             }
             a:hover {
-                @apply underline;
+                // @apply underline;
             }
         }
     }
 
     // paragraph block
     .colby-paragraph-block {
-        @apply font-body;
+        // @apply font-body;
 
         > p {
-            @apply text-indigo-900;
+            // @apply text-indigo-900;
         }
 
         > p,
         > table,
         hr {
-            @apply mb-4;
+            // @apply mb-4;
         }
 
         &:last-child {
-            @apply mb-0;
+            // @apply mb-0;
         }
 
         p:last-child,
         ul:last-child,
         ol:last-child {
-            @apply mb-0;
+            // @apply mb-0;
         }
 
         table,
@@ -176,49 +176,49 @@
     // image with text block
     .colby-image-text-block {
         p {
-            @apply mb-4;
-            @apply text-indigo-900;
-            @apply font-body;
+            // @apply mb-4;
+            // @apply text-indigo-900;
+            // @apply font-body;
         }
     }
 
     // accordion block
     .colby-accordion-block {
         p {
-            @apply mb-4;
-            @apply text-indigo-900;
+            // @apply mb-4;
+            // @apply text-indigo-900;
         }
 
         p,
         ul,
         ol {
-            @apply font-normal;
-            @apply font-body;
-            @apply text-16;
-            @apply leading-140;
+            // @apply font-normal;
+            // @apply font-body;
+            // @apply text-16;
+            // @apply leading-140;
         }
     }
 
     // heading block
     .wp-block-heading {
         > h2 {
-            @apply text-indigo;
+            // @apply text-indigo;
         }
     }
 
     // embed block
     .wp-block-embed {
         .wp-element-caption {
-            @apply font-body;
-            @apply text-indigo-900;
-            @apply font-normal;
+            // @apply font-body;
+            // @apply text-indigo-900;
+            // @apply font-normal;
         }
     }
 
     // group block
     .wp-block-group__inner-container {
         > div {
-            @apply mb-4;
+            // @apply mb-4;
         }
     }
 }
@@ -241,7 +241,7 @@
         position: absolute;
         left: -0.7em; /* Adjust this value so that it appears where you want. */
         font-size: 1.5em; /* Adjust this value so that it appears what size you want. */
-        @apply text-indigo-600;
+        // @apply text-indigo-600;
     }
 }
 
@@ -315,31 +315,31 @@
 // Styles used for the page__main class in the default template
 .page_main_template_styles {
     > div + div {
-        @apply mt-20;
-        @apply md:mt-[100px];
+        // @apply mt-20;
+        // @apply md:mt-[100px];
     }
 
     .advanced-accordion {
-        @apply px-4;
-        @apply xl:px-0;
+        // @apply px-4;
+        // @apply xl:px-0;
     }
 
     > .wp-block-acf-advanced-accordion {
-        @apply font-extended;
-        @apply max-w-[1200px];
-        @apply mx-auto;
+        // // @apply font-extended;
+        // @apply max-w-[1200px];
+        // @apply mx-auto;
     }
 
     > .overlay-hero + .featured-events {
-        @apply mt-0;
+        // @apply mt-0;
     }
 
     > .full-bleed + .full-bleed {
-        @apply mt-0;
+        // @apply mt-0;
     }
 
     .colby-image-text-block {
-        @apply mb-4;
+        // @apply mb-4;
     }
 
     > .article-grid,
@@ -353,15 +353,15 @@
     .inset-widget,
     .block-quote,
     .embed {
-        @apply px-5;
+        // @apply px-5;
     }
 }
 
 /* statuspage.io system status styles */
 .color-description {
-    @apply font-body;
-    @apply text-indigo-900;
-    @apply font-normal;
+    // @apply font-body;
+    // @apply text-indigo-900;
+    // @apply font-normal;
 
     display: inline-block !important;
     margin-left: 5px;

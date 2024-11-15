@@ -5,19 +5,16 @@ export default defineNuxtConfig({
     },
     css: ['@/assets/css/roboto.css'],
 
-    modules: [
-        [
-            '@storyblok/nuxt',
-            {
-                accessToken: process.env.STORYBLOK_TOKEN,
-                apiOptions: {
-                    region: 'us',
-                },
-                componentsDir: '~/components/storyblok',
+    modules: [[
+        '@storyblok/nuxt',
+        {
+            accessToken: process.env.STORYBLOK_TOKEN,
+            apiOptions: {
+                region: 'us',
             },
-        ],
-        '@nuxtjs/tailwindcss',
-    ],
+            componentsDir: '~/components/storyblok',
+        },
+    ], '@nuxtjs/tailwindcss', '@nuxtjs/storybook'],
 
     compatibilityDate: '2024-10-25',
 

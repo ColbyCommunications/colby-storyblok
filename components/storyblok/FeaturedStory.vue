@@ -18,7 +18,7 @@
                     >
                         <div class="mb-3 text-sm uppercase">
                             <a href="https://news.colby.edu/story/category/announcements/">
-                                {{  }}
+                                {{ blok.story[0].content.category[0] }}
                             </a>
                         </div>
 
