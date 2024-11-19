@@ -79,7 +79,7 @@
 
     .columns {
         li {
-            @apply pb-3;
+            // @apply pb-3;
         }
     }
 
@@ -146,11 +146,11 @@
     .spacer-square,
     .spacer-bullet {
         > *:not(:last-child) {
-            @apply items-center;
+            // @apply items-center;
             display: inline-flex;
 
             &::after {
-                @apply block;
+                // @apply block;
                 position: relative;
             }
         }
@@ -159,7 +159,7 @@
     .spacer-square {
         > *:not(:last-child) {
             &::after {
-                // @apply bg-tertiary;
+                // // @apply bg-tertiary;
                 content: '';
                 left: 1.625rem;
                 height: 0.75em;
@@ -172,7 +172,7 @@
     .spacer-bullet {
         > *:not(:last-child) {
             &::after {
-                @apply block;
+                // @apply block;
                 content: '•';
                 margin-left: 0.5rem;
             }
@@ -202,7 +202,7 @@
 }
 
 .list-columns {
-    @apply gap-x-10;
+    // @apply gap-x-10;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -224,27 +224,27 @@
     margin-top: -1px;
 
     ul {
-        @apply border-t border-gray-light;
+        // // @apply border-t border-gray-light;
     }
 
     li:not(:first-child) {
-        @apply border-t border-gray-light pr-8;
+        // // @apply border-t border-gray-light pr-8;
     }
 }
 
 .list-row {
-    @apply gap-6;
+    // @apply gap-6;
 
     &.dividers {
         overflow: hidden;
 
         li:not(:first-child) {
-            @apply xs:border-l border-gray-light;
+            // @apply xs:border-l border-gray-light;
         }
     }
 
     &.max-3 {
-        @apply gap-6;
+        // @apply gap-6;
 
         li {
             @screen lg {
@@ -257,7 +257,7 @@
         }
 
         &.dividers {
-            @apply gap-4 xs:-ml-4;
+            // @apply gap-4 xs:-ml-4;
 
             li {
                 padding-left: 1rem;
@@ -270,7 +270,7 @@
     }
 
     &.max-4 {
-        @apply gap-6;
+        // @apply gap-6;
 
         li {
             @screen xl {
@@ -283,7 +283,7 @@
         }
 
         &.dividers {
-            @apply gap-4 xs:-ml-4;
+            // @apply gap-4 xs:-ml-4;
 
             li {
                 padding-left: 1rem;
@@ -303,7 +303,7 @@
         }
 
         &.dividers {
-            @apply gap-4 xs:-ml-4;
+            // @apply gap-4 xs:-ml-4;
 
             li {
                 padding-left: 1rem;

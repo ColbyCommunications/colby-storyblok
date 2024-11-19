@@ -2,7 +2,7 @@
 
 .has-overlay {
     &::after {
-        @apply inset-0 block z-50 absolute;
+        // @apply inset-0 block z-50 absolute;
         content: '';
         background: currentColor;
     }
@@ -52,7 +52,7 @@
 .wp-block-embed,
 .wp-block-gallery {
     figcaption {
-        // @apply text-sm text-left;
+        // // @apply text-sm text-left;
     }
 }
 
@@ -62,7 +62,7 @@ figure.wp-block-image {
     .wp-block-embed__wrapper,
     img {
         + figcaption {
-            @apply w-auto mt-4;
+            // @apply w-auto mt-4;
         }
     }
 }

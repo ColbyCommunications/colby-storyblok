@@ -4,7 +4,7 @@
 
 // 		@screen menu-sm {
 
-// 			@apply relative;
+// 			// @apply relative;
 
 // 			position: fixed;
 // 			width: 100vw;
@@ -12,13 +12,13 @@
 
 // 			&::after {
 
-// 				@apply block absolute inset-0 bg-darken-80 z-0;
+// 				// @apply block absolute inset-0 bg-darken-80 z-0;
 // 				content: "";
 // 			}
 
 // 			.site-header-layout {
 
-// 				@apply relative;
+// 				// @apply relative;
 // 			}
 // 		}
 
@@ -252,11 +252,11 @@
 
 input[type='search'] {
     &::placeholder {
-        @apply text-gray-800;
+        // @apply text-gray-800;
     }
 
     &:focus + button {
-        // @apply bg-tertiary;
+        // // @apply bg-tertiary;
         outline: 2px solid transparent;
         outline-offset: 2px;
         --ring-inset: var(--tailwind-empty,);

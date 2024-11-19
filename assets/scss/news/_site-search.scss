@@ -1,27 +1,27 @@
 .ais-SearchBox-form {
-    @apply flex;
+    // @apply flex;
 
     .ais-SearchBox-input {
-        @apply border-l-0 border-r-0 border-t-0 border-b-0 focus:ring-0 pl-0 max-w-full w-full sm:w-full placeholder:text-tertiary placeholder:text-sm-plus-1 sm:placeholder:text-lg sm:text-lg;
+        // @apply border-l-0 border-r-0 border-t-0 border-b-0 focus:ring-0 pl-0 max-w-full w-full sm:w-full placeholder:text-tertiary placeholder:text-sm-plus-1 sm:placeholder:text-lg sm:text-lg;
 
         &::-webkit-search-cancel-button {
-            @apply hidden;
+            // @apply hidden;
         }
     }
 
     .ais-SearchBox-submit {
-        @apply hidden;
+        // @apply hidden;
     }
 }
 
 #site-search-hits {
     .ais-Hits-list,
     .ais-InfiniteHits-list {
-        @apply grid gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5;
+        // @apply grid gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5;
     }
 
     .ais-InfiniteHits-loadMore {
-        // @apply mt-12 px-10 py-3 rounded-md uppercase text-sm-plus-1 text-white bg-black hover:bg-gray-800 transition-colors disabled:hidden;
+        // // @apply mt-12 px-10 py-3 rounded-md uppercase text-sm-plus-1 text-white bg-black hover:bg-gray-800 transition-colors disabled:hidden;
     }
 }
 

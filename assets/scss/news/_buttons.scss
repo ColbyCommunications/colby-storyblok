@@ -51,7 +51,7 @@
 
         &:focus-visible {
             outline: none;
-            // @apply ring-2 ring-gray-400;
+            // // @apply ring-2 ring-gray-400;
         }
     }
 }
@@ -151,11 +151,11 @@
         }
 
         &:not([class*='transition']):not([class*='duration']) {
-            @apply transition-colors ease-in-out;
+            // @apply transition-colors ease-in-out;
         }
 
         &:not([class*='transition']):not([class*='duration']) {
-            @apply duration-200;
+            // @apply duration-200;
         }
 
         &.text-text-light {

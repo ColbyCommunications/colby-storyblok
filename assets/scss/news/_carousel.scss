@@ -10,7 +10,7 @@
     }
 
     > .slide-container {
-        @apply mb-6;
+        // @apply mb-6;
     }
 
     .slick-track {
@@ -18,11 +18,11 @@
     }
 
     .slick-list {
-        @apply col-start-2 py-2;
+        // @apply col-start-2 py-2;
     }
 
     .slick-slide {
-        @apply sm:px-4;
+        // @apply sm:px-4;
         grid-row-start: 1;
     }
 
@@ -31,30 +31,30 @@
     }
 
     .slick-prev {
-        @apply pr-4;
+        // @apply pr-4;
         text-align: end;
     }
 
     .slick-next {
-        @apply pl-4;
+        // @apply pl-4;
         text-align: start;
     }
 
     .slick-dots {
-        @apply mt-4 flex space-x-4 justify-center items-center col-span-3;
+        // @apply mt-4 flex space-x-4 justify-center items-center col-span-3;
     }
 
     .slick-active button {
-        // @apply bg-blue-200;
+        // // @apply bg-blue-200;
     }
 
     /* Apply margin only if carousel script is not loaded */
     > .slide-container {
-        @apply mb-6;
+        // @apply mb-6;
     }
 
     figcaption {
-        @apply duration-75 ease-in-out;
+        // @apply duration-75 ease-in-out;
 
         transition-property: font-size;
 
@@ -99,7 +99,7 @@
     }
 
     &::after {
-        @apply absolute inset-0 opacity-0 transition-opacity;
+        // @apply absolute inset-0 opacity-0 transition-opacity;
         content: '';
         box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.75);
     }
@@ -111,7 +111,7 @@
     &:hover,
     &:focus {
         &::after {
-            @apply opacity-100;
+            // @apply opacity-100;
         }
     }
 }
