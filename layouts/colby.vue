@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-    import Header from '../components/global/Header.vue';
+    import Header from '../components/global/colby/Header.vue';
     const props = defineProps(['config']);
 </script>
 <style lang="scss">

@@ -8,7 +8,12 @@ const rem = (pixels) => `${pixels / remBase}rem`;
 module.exports = {
     mode: 'jit',
     purge: {
-        content: ['storyblok/**/*.{vue,js}', 'components/**/*.{vue,js}', 'pages/**/*.vue'],
+        content: [
+            'components/global/news/*.{vue,js}',
+            'pages/**/*.vue',
+            'layouts/news.vue',
+            'components/storyblok/**/*.{vue,js}',
+        ],
         options: {
             safelist: [
                 'h-5',

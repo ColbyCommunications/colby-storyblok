@@ -1,5 +1,10 @@
 module.exports = {
-    content: ['storyblok/**/*.{vue,js}', 'components/**/*.{vue,js}', 'pages/**/*.vue'],
+    content: [
+        'components/global/colby/*.{vue,js}',
+        'pages/**/*.vue',
+        'layouts/colby.vue',
+        'components/storyblok/**/*.{vue,js}',
+    ],
     theme: {
         colors: {
             transparent: 'transparent',
