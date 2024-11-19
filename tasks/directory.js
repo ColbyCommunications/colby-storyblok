@@ -1,4 +1,3 @@
-import { defineCronHandler } from '#nuxt/cron';
 import StoryblokClient from 'storyblok-js-client';
 
 const spaceId = 1022169;
