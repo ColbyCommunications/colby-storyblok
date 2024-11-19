@@ -1,20 +1,24 @@
 export default defineNuxtConfig({
     server: {
-        port: 3000,
-        host: '0.0.0.0',
+        port: process.env.PORT,
+        host: 'localhost',
     },
     css: ['@/assets/css/roboto.css'],
 
-    modules: [[
-        '@storyblok/nuxt',
-        {
-            accessToken: process.env.STORYBLOK_TOKEN,
-            apiOptions: {
-                region: 'us',
+    modules: [
+        [
+            '@storyblok/nuxt',
+            {
+                accessToken: process.env.STORYBLOK_TOKEN,
+                apiOptions: {
+                    region: 'us',
+                },
+                componentsDir: '~/components/storyblok',
             },
-            componentsDir: '~/components/storyblok',
-        },
-    ], '@nuxtjs/tailwindcss', '@nuxtjs/storybook'],
+        ],
+        '@nuxtjs/tailwindcss',
+        // '@nuxtjs/storybook',
+    ],
 
     compatibilityDate: '2024-10-25',
 
