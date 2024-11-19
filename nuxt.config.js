@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
     server: {
-        port: process.env.PORT,
+        port: process !== 'undefined' ? process.env.PORT : 443,
         host: 'localhost',
     },
     css: ['@/assets/css/roboto.css'],
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     },
 
     tailwindcss: {
-        configPath: process.env.TAILWIND_CONFIG,
+        configPath: process !== 'undefined' ? process.env.TAILWIND_CONFIG : env.TAILWIND_CONFIG,
     },
 
     components: {
