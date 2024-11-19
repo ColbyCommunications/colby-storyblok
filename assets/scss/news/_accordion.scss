@@ -57,7 +57,7 @@
 
     &::before,
     &::after {
-        @apply absolute block bg-primary transition-transform;
+        // @apply absolute block bg-primary transition-transform;
         content: '';
         top: 50%;
         right: auto;
