@@ -18,6 +18,7 @@ export default defineNuxtConfig({
         ],
         '@nuxtjs/tailwindcss',
         // '@nuxtjs/storybook',
+        'nuxt-cron',
     ],
 
     compatibilityDate: '2024-10-25',
