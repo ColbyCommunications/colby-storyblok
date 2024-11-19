@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     },
 
     tailwindcss: {
-        configPath: process !== 'undefined' ? process.env.TAILWIND_CONFIG : env.TAILWIND_CONFIG,
+        configPath: `~/${process !== 'undefined' ? process.env.TAILWIND_CONFIG : env.TAILWIND_CONFIG}`,
     },
 
     components: {
