@@ -110,7 +110,7 @@
         padding: var(--btn-padding-y) var(--btn-padding-x) var(--btn-padding-y) var(--btn-padding-x);
 
         &.text-sm {
-            --btn-text-size: theme('fontSize.sm');
+            // --btn-text-size: theme('fontSize.sm');
         }
 
         &:hover,
