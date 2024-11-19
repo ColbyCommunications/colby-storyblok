@@ -299,7 +299,7 @@ div[data-type='acf/nc-table'] {
 }
 
 .alignfull {
-    @apply mx-bleed w-screen max-w-screen;
+    // @apply mx-bleed w-screen max-w-screen;
 
     figcaption {
         @apply mx-auto;
