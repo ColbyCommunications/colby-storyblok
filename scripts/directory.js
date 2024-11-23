@@ -32,6 +32,7 @@ const Storyblok = new StoryblokClient({
     oauthToken: args.storyblokToken,
 });
 
-Storyblok.post(`spaces/${spaceId}/stories`, {
+const response = await Storyblok.post(`spaces/${spaceId}/stories`, {
     story: { name: 'xy', slug: 'xy' },
 });
+console.log(response);
