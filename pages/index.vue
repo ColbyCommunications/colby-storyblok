@@ -19,9 +19,10 @@
     } = await storyblokApi.get(`cdn/stories/${config.public.siteName}/config`);
 
     definePageMeta({
-        layout: 'false',
+        layout: false,
     });
-    console.log(story);
+
+    console.log(config.public.siteName);
     let layout = '';
     switch (config.public.siteName) {
         case 'colby-news':
@@ -30,6 +31,7 @@
         case 'colby-afa':
             layout = 'afa';
             break;
+
         default:
             layout = 'colby';
             break;

@@ -1,0 +1,20 @@
+name: Directory Sync
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+env:
+  STORYBLOK_SPACE_ID: ${{ secrets.STORYBLOK_SPACE_ID }}
+  STORYBLOK_TOKEN: ${{ secrets.STORYBLOK_TOKEN }}
+jobs:
+  directory_sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.x'
+      - run: npm install
+      - run: node ./scripts/directory.js --storyblokToken=${{ secrets.STORYBLOK_TOKEN }} --storyblokSpaceId=${{ secrets.STORYBLOK_SPACE_ID }}
