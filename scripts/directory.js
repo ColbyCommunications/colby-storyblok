@@ -43,4 +43,4 @@ const Storyblok = new StoryblokClient({
     oauthToken: args.storyblokToken,
 });
 
-sync();
+sync().catch((error) => console.error('Error in sync function:', error));
