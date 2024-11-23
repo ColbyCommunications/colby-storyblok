@@ -5,7 +5,8 @@ const fs = require('fs');
 const args = getArgs();
 
 const Storyblok = new StoryblokClient({
-    oauthToken: args.storyblokToken,
+    accessToken: args.storyblokToken,
+    region: 'us',
 });
 
 const spaceId = args.storyblokSpaceId;
