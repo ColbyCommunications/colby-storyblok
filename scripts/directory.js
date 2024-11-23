@@ -1,13 +1,12 @@
 const StoryblokClient = require('storyblok-js-client');
-
 const fs = require('fs');
+
+// get args
+const args = getArgs();
 
 const Storyblok = new StoryblokClient({
     oauthToken: args.storyblokToken,
 });
-
-// get args
-const args = getArgs();
 
 const spaceId = args.storyblokSpaceId;
 
