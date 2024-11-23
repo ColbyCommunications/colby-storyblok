@@ -4,6 +4,7 @@ const fs = require('fs');
 // get args
 const args = getArgs();
 
+console.log(args);
 const Storyblok = new StoryblokClient({
     accessToken: args.storyblokToken,
     region: 'us',
