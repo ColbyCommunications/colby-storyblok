@@ -23,6 +23,13 @@ function getArgs() {
     return args;
 }
 
+async function sync() {
+    const response = await Storyblok.post(`spaces/${spaceId}/stories`, {
+        story: { name: 'xy', slug: 'xy' },
+    });
+    console.log(response);
+}
+
 // get args
 const args = getArgs();
 
@@ -32,7 +39,4 @@ const Storyblok = new StoryblokClient({
     oauthToken: args.storyblokToken,
 });
 
-const response = await Storyblok.post(`spaces/${spaceId}/stories`, {
-    story: { name: 'xy', slug: 'xy' },
-});
-console.log(response);
+sync();
