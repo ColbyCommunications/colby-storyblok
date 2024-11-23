@@ -24,10 +24,14 @@ function getArgs() {
 }
 
 async function sync() {
-    const response = await Storyblok.post(`spaces/${spaceId}/stories`, {
-        story: { name: 'xy', slug: 'xy' },
-    });
-    console.log(response);
+    try {
+        const response = await Storyblok.post(`spaces/${spaceId}/stories`, {
+            story: { name: 'xy', slug: 'xy' },
+        });
+        console.log(response);
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 // get args
