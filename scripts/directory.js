@@ -2,6 +2,15 @@ const StoryblokClient = require('storyblok-js-client');
 
 const fs = require('fs');
 
+const Storyblok = new StoryblokClient({
+    oauthToken: args.storyblokToken,
+});
+
+// get args
+const args = getArgs();
+
+const spaceId = args.storyblokSpaceId;
+
 function getArgs() {
     const args = {};
     process.argv.slice(2, process.argv.length).forEach((arg) => {
@@ -33,14 +42,5 @@ async function sync() {
         console.log(e);
     }
 }
-
-// get args
-const args = getArgs();
-
-const spaceId = args.storyblokSpaceId;
-
-const Storyblok = new StoryblokClient({
-    oauthToken: args.storyblokToken,
-});
 
 sync().catch((error) => console.error('Error in sync function:', error));
