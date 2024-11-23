@@ -26,7 +26,7 @@ function getArgs() {
 // get args
 const args = getArgs();
 
-const spaceId = arg.storyblokSpaceId;
+const spaceId = args.storyblokSpaceId;
 
 const Storyblok = new StoryblokClient({
     oauthToken: args.storyblokToken,
