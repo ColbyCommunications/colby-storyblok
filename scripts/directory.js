@@ -1,4 +1,4 @@
-import StoryblokClient from 'storyblok-js-client';
+const StoryblokClient = require('storyblok-js-client');
 
 const fs = require('fs');
 
