@@ -1,16 +1,4 @@
-const StoryblokClient = require('storyblok-js-client');
-const fs = require('fs');
-
-// get args
-const args = getArgs();
-
-console.log(args);
-const Storyblok = new StoryblokClient({
-    accessToken: args.storyblokToken,
-    region: 'us',
-});
-
-const spaceId = args.storyblokSpaceId;
+const exec = require('child_process').exec;
 
 function getArgs() {
     const args = {};
@@ -33,15 +21,69 @@ function getArgs() {
     return args;
 }
 
-async function sync() {
+// get args
+const args = getArgs();
+
+async function postData() {
     try {
-        const response = await Storyblok.post(`spaces/${spaceId}/stories`, {
-            story: { name: 'xy', slug: 'xy' },
-        });
-        console.log(response);
-    } catch (e) {
-        console.log(e);
+        const response = await fetch(
+            `https://api-us.storyblok.com/v1/spaces/${args.storyblokSpaceId}/stories`,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `${args.storyblokToken}`,
+                },
+                body: JSON.stringify({
+                    story: {
+                        parent_id: 15980813,
+                        name: 'Test Person 1',
+                        slug: 'person-1',
+                        content: { component: 'person', first_name: 'Test Person 1' },
+                    },
+                    publish: 1,
+                }),
+            }
+        );
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+
+        const json = await response.json();
+        console.log(json);
+    } catch (error) {
+        console.error(error.message);
+    }
+
+    try {
+        const response = await fetch(
+            `https://api-us.storyblok.com/v1/spaces/${args.storyblokSpaceId}/stories`,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `${args.storyblokToken}`,
+                },
+                body: JSON.stringify({
+                    story: {
+                        parent_id: 15980813,
+                        name: 'Test Person 2',
+                        slug: 'person-2',
+                        content: { component: 'person', first_name: 'Test Person 2' },
+                    },
+                    publish: 1,
+                }),
+            }
+        );
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+
+        const json = await response.json();
+        console.log(json);
+    } catch (error) {
+        console.error(error.message);
     }
 }
 
-sync().catch((error) => console.error('Error in sync function:', error));
+postData();
