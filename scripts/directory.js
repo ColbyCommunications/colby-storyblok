@@ -34,7 +34,7 @@ async function postData() {
                 },
                 body: JSON.stringify({
                     story: {
-                        parent_id: 15980813,
+                        parent_id: 17040931,
                         name: 'Test Person 1',
                         slug: 'person-1',
                         content: { component: 'person', first_name: 'Test Person 1' },
@@ -64,7 +64,7 @@ async function postData() {
                 },
                 body: JSON.stringify({
                     story: {
-                        parent_id: 15980813,
+                        parent_id: 17040931,
                         name: 'Test Person 2',
                         slug: 'person-2',
                         content: { component: 'person', first_name: 'Test Person 2' },
