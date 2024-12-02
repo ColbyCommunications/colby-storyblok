@@ -1,5 +1,3 @@
-const exec = require('child_process').exec;
-
 function getArgs() {
     const args = {};
     process.argv.slice(2, process.argv.length).forEach((arg) => {
