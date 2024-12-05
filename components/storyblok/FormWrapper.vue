@@ -1,0 +1,16 @@
+<template>
+    <div v-editable="blok" class="flex justify-center p-12">
+        <form name="contact" method="POST" data-netlify="true">
+            <button
+                type="submit"
+                class="w-full rounded-[8px] bg-indigo px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md"
+            >
+                Send
+            </button>
+        </form>
+    </div>
+</template>
+
+<script setup>
+    defineProps({ blok: Object });
+</script>
