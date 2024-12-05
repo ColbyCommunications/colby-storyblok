@@ -77,15 +77,13 @@ module.exports = {
             8: '0.08em',
             '-3': '-0.03em',
         },
-        // backgroundImage: {
-        //     hero__pattern: `url("${path.dirname(__filename)}/src/images/hero__pattern.jpg")`,
-        //     notfound__pattern: `url("${path.dirname(__filename)}/src/images/miller3.jpeg")`,
-        //     darkinterstitial__pattern: `url("${path.dirname(
-        //         __filename
-        //     )}/src/images/Background-3.jpg")`,
-        //     marble__pattern: `url("${path.dirname(__filename)}/src/images/mountain.jpg")`,
-        //     bluemarble__pattern: `url("${path.dirname(__filename)}/src/images/Treatment-36.jpg")`,
-        // },
+        backgroundImage: {
+            hero__pattern: `url("/images/hero__pattern.jpg")`,
+            notfound__pattern: `url("/images/miller3.jpeg")`,
+            darkinterstitial__pattern: `url("/images/Background-3.jpg")`,
+            marble__pattern: `url("/images/mountain.jpg")`,
+            bluemarble__pattern: `url("/images/Treatment-36.jpg")`,
+        },
         listStyleType: {
             none: 'none',
             disc: 'disc',

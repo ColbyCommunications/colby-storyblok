@@ -1,0 +1,39 @@
+<template>
+    <nav
+        aria-label="Breadcrumbs"
+        class="breadcrumbs flex items-center h-9 bg-gray-100 overflow-x-auto"
+    >
+        <div class="breadcrumbs__inner max-w-screen-2xl w-full px-5 mx-auto">
+            <ul class="flex items-center [&>li+li]:ml-5">
+                <li
+                    class="font-body font-bold text-10 leading-140 text-indigo-800 whitespace-nowrap"
+                >
+                    <a
+                        class="text-indigo-800 hover:text-indigo transition-all duration-200 ease-in-out"
+                        href="/"
+                    >
+                        <span class="sr-only">Homepage</span>
+
+                        <span
+                            class="material-icons-sharp w-2.5 fill-indigo-800 hover:fill-indigo transition-all duration-200 ease-in-out"
+                            >home</span
+                        >
+                    </a>
+                </li>
+                {% for item in items %}
+                <li
+                    class="font-body font-bold text-10 leading-140 text-indigo-800 whitespace-nowrap"
+                >
+                    <a
+                        class="text-indigo-800 hover:text-indigo transition-all duration-200 ease-in-out"
+                        href="{{ item.url }}"
+                        >{{ item.title }}</a
+                    >
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+</template>
+
+<script setup></script>

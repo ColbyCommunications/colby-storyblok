@@ -5,6 +5,8 @@
 </template>
 
 <script setup>
+    import { useHead } from 'nuxt/app';
+
     const route = useRoute();
     const storyblokApi = useStoryblokApi();
 
@@ -12,7 +14,7 @@
 
     const slug = route.params.slug;
 
-    const resolveRelations = ['featured-story.story'];
+    // const resolveRelations = ['featured-story.story'];
 
     let storyBlokSlug = '';
     if (slug && slug.length > 0) {
@@ -25,11 +27,11 @@
         storyBlokSlug,
         {
             version: 'draft',
-            resolve_relations: resolveRelations,
-        },
-        {
-            resolveRelations,
+            // resolve_relations: resolveRelations,
         }
+        // {
+        //     resolveRelations,
+        // }
     );
     console.log(story);
 
