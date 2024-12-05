@@ -1,6 +1,11 @@
 <template>
     <div v-editable="blok" class="flex justify-center p-12">
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" action="">
+            <StoryblokComponent
+                v-for="formBlok in blok.forms"
+                :key="formBlok._uid"
+                :blok="formBlok"
+            />
             <button
                 type="submit"
                 class="w-full rounded-[8px] bg-indigo px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md"
