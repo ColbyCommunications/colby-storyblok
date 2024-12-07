@@ -1,12 +1,10 @@
 <template>
-    <NuxtLayout :name="layout" :config="siteConfig">
+    <NuxtLayout :name="layout" :config="siteConfig" :story="story">
         <StoryblokComponent v-if="story" :blok="story.content" />
     </NuxtLayout>
 </template>
 
 <script setup>
-    import { useHead } from 'nuxt/app';
-
     const route = useRoute();
     const storyblokApi = useStoryblokApi();
 
@@ -33,7 +31,7 @@
         //     resolveRelations,
         // }
     );
-    console.log(story);
+    console.log(story.value);
 
     const {
         data: { story: siteConfig },
@@ -52,6 +50,7 @@
             layout = 'afa';
             break;
         default:
+            siteConfig.contentLayout = story.value.content.template;
             layout = 'colby';
             break;
     }

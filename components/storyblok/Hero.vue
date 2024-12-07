@@ -77,7 +77,8 @@
 <script setup>
     import TextGroupMacro from '../global/colby/TextGroup.macro.vue';
     import PictureMacro from '../global/colby/Picture.macro.vue';
-    defineProps({ blok: Object });
+    const props = defineProps({ blok: Object });
+    console.log(props);
 </script>
 
 <style></style>
