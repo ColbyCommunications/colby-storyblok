@@ -46,23 +46,23 @@
         return story.full_slug.includes('colby-edu');
     });
     const router = useRouter();
-    // console.log(colbyPages);
+    console.log(colbyPages);
     const currentPath = router.currentRoute.value.path;
 
     const pathParts = currentPath.split('/').filter((elem) => elem !== '');
 
-    // console.log(pathParts);
+    console.log(pathParts);
     let finalParts = [];
-    pathParts.forEach((part, i) => {
-        let finalPart = colbyPages.find((elem) => {
-            let fullPathProcessed = elem.full_slug
-                .replace('colby-edu/', '')
-                .split('/')
-                .filter((elem) => elem !== '');
-            // console.log(fullPathProcessed);
-            return fullPathProcessed[fullPathProcessed.length - 1] === part;
-        });
+    // pathParts.forEach((part, i) => {
+    //     let finalPart = colbyPages.find((elem) => {
+    //         let fullPathProcessed = elem.full_slug
+    //             .replace('colby-edu/', '')
+    //             .split('/')
+    //             .filter((elem) => elem !== '');
+    //         // console.log(fullPathProcessed);
+    //         return fullPathProcessed[fullPathProcessed.length - 1] === part;
+    //     });
 
-        finalParts.push(finalPart);
-    });
+    //     finalParts.push(finalPart);
+    // });
 </script>

@@ -3,6 +3,7 @@
         <Header :items="props.config.content.utility_navigation" :config="props.config" />
         <Breadcrumbs />
         <main id="main">
+            <slot></slot>
             <Hero
                 :blok="{
                     heading: heroHeading,
