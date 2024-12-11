@@ -1,6 +1,6 @@
 <template>
     <div class="form-group mb-6" v-editable="blok">
-        <select>
+        <select :name="blok.name">
             <SelectOption v-for="option in sortedOptions" :key="option._uid" :blok="option" />
         </select>
     </div>
