@@ -1,9 +1,9 @@
 <template>
     <div id="content">
         <Header :items="props.config.content.utility_navigation" :config="props.config" />
-        <!-- <Breadcrumbs /> -->
+        <Breadcrumbs />
         <main id="main">
-            <slot></slot>
+            <slot v-if="props.config.contentLayout !== 'page-with-side-bar'"></slot>
             <Hero
                 v-if="props.config.contentLayout === 'page-with-side-bar'"
                 :blok="{
