@@ -31,7 +31,9 @@
         //     resolveRelations,
         // }
     );
-    console.log(story.value);
+    console.log(story);
+
+    // console.log(useStoryblokBridge(story.value.id));
 
     const {
         data: { story: siteConfig },
@@ -42,6 +44,7 @@
     });
 
     let layout = '';
+
     switch (config.public.siteName) {
         case 'colby-news':
             layout = 'news';
@@ -53,5 +56,9 @@
             siteConfig.contentLayout = story.value.content.template;
             layout = 'colby';
             break;
+    }
+
+    if (story.value.full_slug.includes('/forms/')) {
+        layout = 'form';
     }
 </script>
