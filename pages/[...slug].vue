@@ -58,7 +58,7 @@
             break;
     }
 
-    if (story.value.full_slug.includes('/forms/')) {
+    if (story.value.content.component === 'form') {
         layout = 'form';
     }
 </script>
