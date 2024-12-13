@@ -14,12 +14,7 @@
 
     // const resolveRelations = ['featured-story.story'];
 
-    let storyBlokSlug = '';
-    if (slug && slug.length > 0) {
-        storyBlokSlug = config.public.siteName + '/' + slug.join('/');
-    } else {
-        storyBlokSlug = config.public.siteName + '/home';
-    }
+    let storyBlokSlug = config.public.siteName + '/' + slug.join('/');
 
     const story = await useAsyncStoryblok(
         storyBlokSlug,

@@ -8,11 +8,12 @@
     const story = useState();
     const storyblokApi = useStoryblokApi();
     const config = useRuntimeConfig();
-    const { data } = await storyblokApi.get(`cdn/stories/${config.public.siteName}/home`, {
+    const { data } = await storyblokApi.get(`cdn/stories/${config.public.siteName}/`, {
         version: 'draft',
         resolve_relations: 'featured-story.story',
     });
     story.value = data.story;
+    console.log(story.value);
 
     const {
         data: { story: siteConfig },
