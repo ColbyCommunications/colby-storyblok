@@ -1,6 +1,6 @@
 <template>
     <NuxtLayout :name="layout" :config="siteConfig" :story="story">
-        <StoryblokComponent v-if="story" :blok="story.content" />
+        <StoryblokComponent v-if="story" :blok="story.content" :tags="story.tag_list" />
     </NuxtLayout>
 </template>
 
@@ -14,12 +14,7 @@
 
     const resolveRelations = ['form-wrapper.form'];
 
-    let storyBlokSlug = '';
-    if (slug && slug.length > 0) {
-        storyBlokSlug = config.public.siteName + '/' + slug.join('/');
-    } else {
-        storyBlokSlug = config.public.siteName + '/home';
-    }
+    let storyBlokSlug = config.public.siteName + '/' + slug.join('/');
 
     const story = await useAsyncStoryblok(
         storyBlokSlug,
