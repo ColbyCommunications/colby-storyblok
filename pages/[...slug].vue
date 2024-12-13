@@ -1,6 +1,6 @@
 <template>
     <NuxtLayout :name="layout" :config="siteConfig" :story="story">
-        <StoryblokComponent v-if="story" :blok="story.content" />
+        <StoryblokComponent v-if="story" :blok="story.content" :tags="story.tag_list" />
     </NuxtLayout>
 </template>
 
