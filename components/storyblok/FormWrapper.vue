@@ -2,9 +2,9 @@
     <div v-editable="blok" class="flex justify-center p-12">
         <form name="contact" method="POST" @submit.prevent="handleSubmit">
             <StoryblokComponent
-                v-for="formBlok in blok.forms"
-                :key="formBlok._uid"
-                :blok="formBlok"
+                v-for="field in blok.form.content.fields"
+                :key="field._uid"
+                :blok="field"
             />
             <button
                 type="submit"
@@ -16,4 +16,6 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+    const props = defineProps({ blok: Object });
+</script>

@@ -1,10 +1,10 @@
 <template>
     <div class="form-group mb-6" v-editable="blok">
-        <RadioOption v-for="option in blok.options" :key="option._uid" :blok="option" />
+        <input :id="blok.name" type="radio" :name="blok.group" :value="blok.name" />
+        <label :for="blok.name">{{ blok.label }}</label>
     </div>
 </template>
 
 <script setup>
-    import RadioOption from './RadioOption.vue';
     const props = defineProps({ blok: Object });
 </script>

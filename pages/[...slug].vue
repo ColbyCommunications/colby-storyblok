@@ -12,7 +12,7 @@
 
     const slug = route.params.slug;
 
-    // const resolveRelations = ['featured-story.story'];
+    const resolveRelations = ['form-wrapper.form'];
 
     let storyBlokSlug = '';
     if (slug && slug.length > 0) {
@@ -25,11 +25,11 @@
         storyBlokSlug,
         {
             version: 'draft',
-            // resolve_relations: resolveRelations,
+            resolve_relations: resolveRelations,
+        },
+        {
+            resolveRelations,
         }
-        // {
-        //     resolveRelations,
-        // }
     );
     console.log(story);
 
