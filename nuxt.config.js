@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             siteName: process.env.SITE_NAME,
+            GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
         },
     },
 
