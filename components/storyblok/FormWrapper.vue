@@ -18,48 +18,48 @@
 
 <script setup>
     const props = defineProps({ blok: Object });
-    import { GoogleAuth } from 'google-auth-library';
-    import { google } from 'googleapis';
-    const google_spreadsheet_id = props.blok.form.content.google_sheets_id;
 
-    const handleSubmit = (event) => {
+    const google_spreadsheet_id = props.blok.form.content.google_sheets_id;
+    const BEARER_TOKEN = 'YOUR BEARER TOKEN HERE';
+
+    const handleSubmit = async (event) => {
         const form = event.target;
         const formData = new FormData(form);
 
         const formValues = [];
         formData.forEach((value, key) => {
-            formValues.push({ [key]: value });
+            formValues.push(value);
         });
 
-        console.log('Google Sheets ID:', props.blok.form.content.google_sheets_id);
+        console.log('Google Sheets ID:', google_spreadsheet_id);
         console.log('Collected Form Data:', formValues);
 
-        appendValues(google_spreadsheet_id, 'A2', 'USER_ENTERED', formValues);
+        await appendValues(google_spreadsheet_id, 'A2', 'USER_ENTERED', formValues);
     };
 
-    async function appendValues(spreadsheetId, range, valueInputOption, _values) {
-        const auth = new GoogleAuth({
-            scopes: 'https://www.googleapis.com/auth/spreadsheets',
-        });
+    const appendValues = async (spreadsheetId, range, valueInputOption, values) => {
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}:append?valueInputOption=${valueInputOption}`;
 
-        const service = google.sheets({ version: 'v4', auth });
-
-        const resource = {
-            _values,
+        const data = {
+            values: [values],
         };
 
-        try {
-            const result = await service.spreadsheets.values.append({
-                spreadsheetId,
-                range,
-                valueInputOption,
-                resource,
-            });
-            console.log(`${result.data.updates.updatedCells} cells appended.`);
-            return result;
-        } catch (err) {
-            // TODO (developer) - Handle exception
-            throw err;
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                Authorization: `Bearer ${BEARER_TOKEN}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+        console.log('Google Sheets API Response:', result);
+
+        if (response.ok) {
+            alert('Data successfully added to Google Sheets');
+        } else {
+            alert('Error appending data to Google Sheets');
         }
-    }
+    };
 </script>

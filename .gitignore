@@ -9,4 +9,5 @@ dist
 localhost-key.pem
 localhost.pem
 secrets.json
+credentials.json
 *storybook.log
